@@ -1,0 +1,16 @@
+{
+  "name": "escsrl/filegenerator",
+  "type": "library",
+  "description": "Generate file",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Esc\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "phpoffice/phpspreadsheet": "^1.10",
+    "doctrine/orm": "^2.6"
+  }
+}
