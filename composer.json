@@ -1,7 +1,7 @@
 {
-  "name": "escsrl/filegenerator",
+  "name": "escsrl/exporter",
   "type": "library",
-  "description": "Generate file",
+  "description": "Export file",
   "license": "MIT",
   "autoload": {
     "psr-4": {
