@@ -3,7 +3,7 @@
 
 namespace Esc\Writer;
 
-use Esc\Services\Export\ExportData;
+use Esc\Export\ExportData;
 use PhpOffice\PhpSpreadsheet\Exception;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\IWriter;

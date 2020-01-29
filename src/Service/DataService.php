@@ -3,9 +3,9 @@
 
 namespace Esc\Service;
 
-use Esc\Services\Read\ReadEntityData;
-use Esc\Services\Writer\CsvWriter;
-use Esc\Services\Writer\ExcelWriter;
+use Esc\Read\ReadEntityData;
+use Esc\Writer\CsvWriter;
+use Esc\Writer\ExcelWriter;
 use PhpOffice\PhpSpreadsheet\Exception;
 
 class DataService
