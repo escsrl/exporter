@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Esc\Services\Export;
+namespace Esc\Export;
 
 use PhpOffice\PhpSpreadsheet\Exception;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Esc\Services;
+namespace Esc\Service;
 
 use Esc\Services\Read\ReadEntityData;
 use Esc\Services\Writer\CsvWriter;

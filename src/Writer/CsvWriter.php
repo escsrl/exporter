@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Esc\Services\Writer;
+namespace Esc\Writer;
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Csv;

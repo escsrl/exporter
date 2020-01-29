@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Esc\Services\Read;
+namespace Esc\Read;
 
 use Esc\ExportableInterface\Exportable;
 use Doctrine\ORM\EntityManagerInterface;
