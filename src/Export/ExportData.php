@@ -20,7 +20,7 @@ class ExportData
      * @return Spreadsheet
      * @throws Exception
      */
-    public function createSpreadsheet($data): Spreadsheet
+    public function createSpreadsheet(array $data): Spreadsheet
     {
         if (empty($data)) {
             $this->spreadsheet->getActiveSheet()->fromArray(['No data'], null, 'A1');
