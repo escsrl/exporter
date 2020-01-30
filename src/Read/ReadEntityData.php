@@ -15,7 +15,7 @@ class ReadEntityData
         $this->entityManager = $entityManager;
     }
 
-    public function getDataFromRepository(string $className)
+    public function getDataFromRepository(string $className): array
     {
         if (!class_exists($className)) {
             throw new \RuntimeException('Class ' . $className . ' does not exist.');
