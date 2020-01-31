@@ -11,6 +11,7 @@
   "require": {
     "php": "^7.1",
     "phpoffice/phpspreadsheet": "^1.10",
-    "doctrine/orm": "^2.6"
+    "doctrine/orm": "^2.6",
+    "phpunit/phpunit": "^8.5"
   }
 }

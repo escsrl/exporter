@@ -25,8 +25,7 @@ class ExportData
         if (empty($data)) {
             $this->spreadsheet->getActiveSheet()->fromArray(['No data'], null, 'A1');
         } else {
-            $columnHeader [] = array_keys($data[0]);
-            $this->spreadsheet->getActiveSheet()->fromArray($columnHeader, null, 'A1');
+            $this->spreadsheet->getActiveSheet()->fromArray(array_keys($data[0]), null, 'A1');
             $this->spreadsheet->getActiveSheet()->fromArray($data, null, 'A2');
         }
         return $this->spreadsheet;
