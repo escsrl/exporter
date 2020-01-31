@@ -2,8 +2,7 @@
   "name": "vlupopasini/exporter",
   "type": "library",
   "description": "Export file",
-  "keywords": [
-  ],
+  "keywords": [],
   "license": "MIT",
   "authors": [
     {
@@ -27,5 +26,5 @@
     "doctrine/orm": "^2.6",
     "phpunit/phpunit": "^8.5"
   },
-  "version": "1.0"
+  "version": "1.0.1"
 }
