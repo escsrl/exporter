@@ -51,20 +51,4 @@ class ExportDataTest extends TestCase
         $exportData->createSpreadsheet($data);
 
     }
-
-    public function testReturnValueMethodIsSpreadsheet(): void
-    {
-        $spreadsheet = $this->getMockBuilder(Spreadsheet::class)
-            ->getMock();
-        $exportData = new ExportData($spreadsheet);
-        $worksheet = $this->getMockBuilder(Worksheet::class)
-            ->getMock();
-        $worksheet->method('fromArray')
-            ->willReturn($worksheet);
-        $spreadsheet->method('getActiveSheet')
-            ->willReturn($worksheet);
-        $sheetResult = $exportData->createSpreadsheet([]);
-        $this->assertSame($sheetResult, $spreadsheet);
-    }
-
 }

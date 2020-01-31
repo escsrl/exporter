@@ -27,7 +27,7 @@ class ReadEntityTest extends TestCase
         $this->assertIsArray($data);
     }
 
-    public function testIfClassExists(): void
+    public function testExceptionIsThrownWhenClassDoesNotExist(): void
     {
         $entityManager = $this->getMockBuilder(EntityManagerInterface::class)
             ->getMock();
@@ -36,7 +36,7 @@ class ReadEntityTest extends TestCase
         $readEntityData->getDataFromRepository('foo');
     }
 
-    public function testIfClassImplementsExportable(): void
+    public function ttestExceptionIsThrownWhenClassDoesNotImplementsExportable(): void
     {
         $entityManager = $this->getMockBuilder(EntityManagerInterface::class)
             ->getMock();
