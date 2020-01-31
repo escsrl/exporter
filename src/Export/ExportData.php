@@ -22,11 +22,12 @@ class ExportData
      */
     public function createSpreadsheet(array $data): Spreadsheet
     {
+        $activeSheet = $this->spreadsheet->getActiveSheet();
         if (empty($data)) {
-            $this->spreadsheet->getActiveSheet()->fromArray(['No data'], null, 'A1');
+            $activeSheet->fromArray(['No data'], null, 'A1');
         } else {
-            $this->spreadsheet->getActiveSheet()->fromArray(array_keys($data[0]), null, 'A1');
-            $this->spreadsheet->getActiveSheet()->fromArray($data, null, 'A2');
+            $activeSheet->fromArray(array_keys($data[0]), null, 'A1');
+            $activeSheet->fromArray($data, null, 'A2');
         }
         return $this->spreadsheet;
     }
