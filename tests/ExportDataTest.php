@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Esc\tests;
+namespace Esc\Tests;
 
 use Esc\Export\ExportData;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
