@@ -2,16 +2,30 @@
   "name": "vlupopasini/exporter",
   "type": "library",
   "description": "Export file",
+  "keywords": [
+  ],
   "license": "MIT",
+  "authors": [
+    {
+      "name": "Veronica Lupo Pasini",
+      "email": "lupopasiniveronica@gmail.com"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "Esc\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Esc\\tests\\": "tests"
+    }
+  },
   "require": {
-    "php": "^7.1",
+    "php": "^7.3",
     "phpoffice/phpspreadsheet": "^1.10",
     "doctrine/orm": "^2.6",
     "phpunit/phpunit": "^8.5"
-  }
+  },
+  "version": "1.0"
 }

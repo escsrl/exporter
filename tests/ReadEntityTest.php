@@ -1,6 +1,6 @@
 <?php
 
-namespace App\tests;
+namespace Esc\tests;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Esc\ExportableInterface\Exportable;
