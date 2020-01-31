@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Esc\Tests;
+namespace Esc\Tests\Export;
 
 use Esc\Export\ExportData;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 class ExportDataTest extends TestCase
 {
-    public function testCreateEmptySpreadsheet(): void
+    public function testCreateEmptySpreadsheetPassingEmptyArray(): void
     {
         $spreadsheet = $this->getMockBuilder(Spreadsheet::class)
             ->getMock();
@@ -22,17 +22,16 @@ class ExportDataTest extends TestCase
         $spreadsheet->method('getActiveSheet')
             ->willReturn($worksheet);
         $exportData = new ExportData($spreadsheet);
-        $sheetResult = $exportData->createSpreadsheet([]);
-        $this->assertSame($sheetResult, $spreadsheet);
+        $exportData->createSpreadsheet([]);
     }
 
-    public function testCreateSpreadsheet(): void
+    public function testThatCreateSpreadsheetCallsMethodTwoTimes(): void
     {
         $spreadsheet = $this->getMockBuilder(Spreadsheet::class)
             ->getMock();
         $worksheet = $this->getMockBuilder(Worksheet::class)
             ->getMock();
-        $data = $data = [
+        $data = [
             0 =>
                 [
                     'foo' => 1,
@@ -49,8 +48,23 @@ class ExportDataTest extends TestCase
         $spreadsheet->method('getActiveSheet')
             ->willReturn($worksheet);
         $exportData = new ExportData($spreadsheet);
-        $sheetResult = $exportData->createSpreadsheet($data);
-        $this->assertSame($sheetResult, $spreadsheet);
+        $exportData->createSpreadsheet($data);
 
     }
+
+    public function testReturnValueMethodIsSpreadsheet(): void
+    {
+        $spreadsheet = $this->getMockBuilder(Spreadsheet::class)
+            ->getMock();
+        $exportData = new ExportData($spreadsheet);
+        $worksheet = $this->getMockBuilder(Worksheet::class)
+            ->getMock();
+        $worksheet->method('fromArray')
+            ->willReturn($worksheet);
+        $spreadsheet->method('getActiveSheet')
+            ->willReturn($worksheet);
+        $sheetResult = $exportData->createSpreadsheet([]);
+        $this->assertSame($sheetResult, $spreadsheet);
+    }
+
 }

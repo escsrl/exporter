@@ -1,6 +1,6 @@
 <?php
 
-namespace Esc\Tests;
+namespace Esc\Tests\Read;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Esc\ExportableInterface\Exportable;
@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class ReadEntityTest extends TestCase
 {
-    public function testIfGetRepositoryDataIsArray(): void
+    public function testIfMethodReturnDataArray(): void
     {
         $entityManager = $this->getMockBuilder(EntityManagerInterface::class)
             ->getMock();
